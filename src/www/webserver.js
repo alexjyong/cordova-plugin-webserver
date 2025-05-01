@@ -54,3 +54,7 @@ export function stop(success_callback, error_callback) {
     []
   );
 }
+
+export function pushFrame(base64Jpeg, success = () => {}, error = () => {}) {
+  exec(success, error, 'Webserver', 'pushFrame', [base64Jpeg]);
+}
