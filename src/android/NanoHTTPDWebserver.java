@@ -18,6 +18,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
+import org.apache.cordova.plugin.MJPEGStream;
+import org.apache.cordova.plugin.MJPEGFrameBuffer;
 
 import fi.iki.elonen.NanoHTTPD;
 
