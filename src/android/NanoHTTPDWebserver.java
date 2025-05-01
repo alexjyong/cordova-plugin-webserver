@@ -207,6 +207,10 @@ public class NanoHTTPDWebserver extends NanoHTTPD {
     public Response serve(IHTTPSession session) {
         Log.d(this.getClass().getName(), "New request is incoming!");
         if ("/stream".equals(session.getUri())) {
+            PluginResult logResult = new PluginResult(PluginResult.Status.OK, "[plugin] Client connected to /stream");
+            logResult.setKeepCallback(true);
+            this.webserver.onRequestCallbackContext.sendPluginResult(logResult);
+
             return newChunkedResponse(Response.Status.OK, "multipart/x-mixed-replace; boundary=frame", new MJPEGStream());
         }
         String requestUUID = UUID.randomUUID().toString();
