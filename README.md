@@ -16,11 +16,11 @@ I started this project because I wanted a solution like [ExpressJS](http://expre
 
 Just add the cordova plugin to your project
 
-`cordova plugin add https://github.com/bykof/cordova-plugin-webserver`
+`cordova plugin add https://github.com/alexjyong/cordova-plugin-webserver`
 
 ## Use
 
-Ok so it's pretty ez. There are 4 Methods which are available in the `webserver` variable:
+Ok so it's pretty easy. There are 4 Methods which are available in the `webserver` variable:
 
 - start(port) or start()
 - stop()
