@@ -44,6 +44,13 @@ public class Webserver extends CordovaPlugin {
             this.sendResponse(args, callbackContext);
             return true;
         }
+        if ("pushFrame".equals(action)) {
+            String base64 = args.getString(0);
+            byte[] jpeg = android.util.Base64.decode(base64, android.util.Base64.DEFAULT);
+            MJPEGFrameBuffer.update(jpeg);
+            callbackContext.success();
+            return true;
+        }
         return false;  // Returning false results in a "MethodNotFound" error.
     }
 
