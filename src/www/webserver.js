@@ -5,6 +5,7 @@ const START_FUNCTION = 'start';
 const ONREQUEST_FUNCTION = 'onRequest';
 const SENDRESPONSE_FUNCION = 'sendResponse';
 const STOP_FUNCTION = 'stop';
+const PUSHFRAME_FUNCTION = 'pushFrame'
 
 export function start(success_callback, error_callback, port) {
   let params = [];
@@ -56,5 +57,5 @@ export function stop(success_callback, error_callback) {
 }
 
 export function pushFrame(base64Jpeg, success = () => {}, error = () => {}) {
-  exec(success, error, 'Webserver', 'pushFrame', [base64Jpeg]);
+  exec(success, error, WEBSERVER_CLASS, PUSHFRAME_FUNCTION, [base64Jpeg]);
 }
