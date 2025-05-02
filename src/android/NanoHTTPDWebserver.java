@@ -28,7 +28,7 @@ public class NanoHTTPDWebserver extends NanoHTTPD {
     Webserver webserver;
 
     public NanoHTTPDWebserver(int port, Webserver webserver) {
-        super(port);
+        super("0.0.0.0", port);
         this.webserver = webserver;
     }
 
